@@ -98,20 +98,20 @@ void LinkedStackType<Type>:: initializeStack() {
         temp = stackTop;    //set temp to point to the 
                             //current node
 
-        stackTop = stackTop->next; 
-        /*try {
+        //stackTop = stackTop->next; 
+        try {
+
             stackTop = stackTop->next;  //advance stackTop to the
         }                   //next node
         catch (exception e){
             delete temp;
-            stackTop = nullptr;
+            //stackTop = nullptr;
             return;
-        }*/
+        }
         //tempor = stackTop;
-        //temp = NULL;
+        temp = NULL;
         delete temp;    //deallocate memory occupied by temp
     }
-    stackTop = nullptr;
 } //end initializeStack
 
 
@@ -194,6 +194,7 @@ void LinkedStackType<Type>::copyStack(const LinkedStackType<Type>& otherStack) {
 template <class Type>
 LinkedStackType<Type>::LinkedStackType() {
     count = 0;
+    stackTop = nullptr;
     initializeStack();
 }
 

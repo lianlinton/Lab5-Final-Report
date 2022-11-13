@@ -23,7 +23,7 @@ DiscussMenu::DiscussMenu()
     addOption("5) Delete");
     addOption("x) Exit");
 
-    pDiscuss = nullptr;
+    pDiscuss = new Discussion();
     list = new UnorderedLinkedList<Discussion>();
     list->initializeList();
     init();
@@ -51,16 +51,18 @@ void DiscussMenu::init() {
         getline(inFile, post);
         Discussion d;
         Student s;
-        setStudent(s, user);
-        d.setStudent(s);
+        setStudent(&s, user);
+        d.setStudent(&s);
         d.setDate(date);
         d.setPost(post);
         list->insertLast(d);
+        pDiscuss = &d;
     }
     inFile.clear();
+    //pDiscuss = &(list->back());
 }
 
-void DiscussMenu::setStudent(Student& s, string name){
+void DiscussMenu::setStudent(Student* s, string name){
     int pos, i = 0;
     string names[3];
     do {
@@ -72,15 +74,15 @@ void DiscussMenu::setStudent(Student& s, string name){
             names[2] = name;
         }
     } while (pos > 0);
-    s.setFirstName(names[0]);
-    s.setMiddleName(names[1]);
-    s.setLastName(names[2]);
+    s->setFirstName(names[0]);
+    s->setMiddleName(names[1]);
+    s->setLastName(names[2]);
 }
 
 void DiscussMenu::doEdit(){
-    if (pDiscuss == nullptr) {
+   if (pDiscuss == nullptr) {
         doList();
-    }
+    } 
     Discussion* p = pDiscuss;
 
     string temp;
@@ -90,8 +92,8 @@ void DiscussMenu::doEdit(){
 
     if (!temp.empty()) {
         Student s;
-        setStudent(s, temp);
-        p->setStudent(s);
+        setStudent(&s, temp);
+        p->setStudent(&s);
     }
     
     p->print();
@@ -102,13 +104,14 @@ void DiscussMenu::doList() {
     Discussion d;
     LinkedListIterator<Discussion> it;
     for (it = list->begin(); it != list->end(); ++it){
-        //((Discussion*) &(*it))->print();
-        d = *it;
+        ((Discussion*) &(*it))->print();
+        /*d = *it;
         cout << d.getName() << endl;
         cout << d.getDateTime().toString() << endl;
-        cout << d.getText() << endl;
+        cout << d.getText() << endl;*/
         cout << setfill('-') << setw(50) << "\n";
     }
+    pDiscuss = (Discussion*) &(*list->end());
     cout << endl;
 }
 
@@ -136,17 +139,20 @@ void DiscussMenu::doAdd(){
     cout << "Enter message: ";
     cin >> post;
     Student s;
-    setStudent(s, user);
-    d.setStudent(s);
+    setStudent(&s, user);
+    d.setStudent(&s);
     d.setDate(date);
     d.setPost(post);
     list->insertLast(d);
+    pDiscuss = &d;
 }
 
 void DiscussMenu::doDelete() {
     if (pDiscuss == nullptr) {
         doList();
     }
-    list->deleteNode(*pDiscuss);
+    else {
+        //list->deleteNode(*pDiscuss);
+    }
 }
 

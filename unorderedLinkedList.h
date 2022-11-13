@@ -45,7 +45,7 @@ public:
     //               first points to the first node, last
     //               points to the last node of the updated
     //               list, and count is decremented by 1.
-    void deleteNode(const Type& deleteItem);
+    void deleteNode(Type& deleteItem);
 };
 
 
@@ -68,7 +68,7 @@ bool UnorderedLinkedList<Type>::search(Type& searchItem) {
 
 template <class Type>
 void UnorderedLinkedList<Type>::insertFirst(const Type& newItem) {
-    NodeType<Type> *newNode; //pointer to create the new node
+    /*NodeType<Type> *newNode; //pointer to create the new node
 
     newNode = new NodeType<Type>; //create the new node
 
@@ -90,7 +90,7 @@ void UnorderedLinkedList<Type>::insertFirst(const Type& newItem) {
     //actual first node
     //increment count
     //if the list was empty, newNode is also
-    //the last node in the list
+    //the last node in the list*/
 }//end insertFirst
 
 template <class Type>
@@ -105,11 +105,11 @@ void UnorderedLinkedList<Type>::insertLast(const Type& newItem) {
     // TODO Case 1: if the list is empty, newNode is
     // both the first and last node
     if (this->isEmptyList()){
-        top = newNode;
-        bottom = newNode;
+        this->top = newNode;
+        this->bottom = newNode;
     } else {
-        bottom->next = newNode;
-        bottom = newNode;
+        this->bottom->next = newNode;
+        this->bottom = newNode;
     }
     
     // TODO Case 2: the list is not empty, insert newNode after last
@@ -118,20 +118,20 @@ void UnorderedLinkedList<Type>::insertLast(const Type& newItem) {
     //make last point to the actual
     //last node in the list
     //increment count
-    count++;
+    this->count++;
 }//end insertLast
 
 
 template <class Type>
-void UnorderedLinkedList<Type>::deleteNode(const Type& deleteItem) {
+void UnorderedLinkedList<Type>::deleteNode(Type& deleteItem) {
     NodeType<Type> *current; //pointer to traverse the list
     NodeType<Type> *trailCurrent; //pointer just before current
-    current = top->next;
-    trailCurrent = top;
-    if (deleteItem == trailCurrent){
-        top = current;
+    current = this->top->next;
+    trailCurrent = this->top;
+    if (deleteItem == (trailCurrent->info)){
+        this->top = current;
         delete trailCurrent;
-        count--;
+          (this->count)--;
         return;
     }
     while (current != nullptr)
@@ -144,8 +144,7 @@ void UnorderedLinkedList<Type>::deleteNode(const Type& deleteItem) {
         current = current->next;   
         trailCurrent = trailCurrent->next;
     }
-    count--;
+    (this->count)--;
 }//end deleteNode
-
 
 #endif

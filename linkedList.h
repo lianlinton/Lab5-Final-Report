@@ -99,7 +99,7 @@ public:
     //               first points to the first node, last
     //               points to the last node of the updated
     //               list, and count is decremented by 1.
-    virtual void deleteNode(const Type& deleteItem) = 0;
+    virtual void deleteNode(Type& deleteItem) = 0;
     
     //Function to return an iterator at the begining of
     //the linked list.

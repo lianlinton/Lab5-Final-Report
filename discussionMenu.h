@@ -35,7 +35,7 @@ public:
 		return pDiscuss != nullptr;
 	};
 	void init();
-	void setStudent(Student& s, string name);
+	void setStudent(Student* s, string name);
 	
 private:
 	void selectedPost(Discussion& c) {

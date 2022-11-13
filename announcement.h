@@ -19,9 +19,9 @@ class Announcement{
 
         void print() {
             cout << title << endl;
-            cout << "------------------------------" << endl;
             cout << "Date: " << postDate.toString() << endl;
             cout << text << endl;
+            cout << setfill('-') << setw(50) << "\n";
         };
 
         string getTitle(){

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "announcementMenu.cpp"
 #include "discussionMenu.cpp"
+#include "studentMenu.cpp"
 using namespace std;
 int main() {
     /*Announcement announce;
@@ -11,11 +12,29 @@ int main() {
 
     announce.print();*/
 
-    /*AnnounceMenu announce;
+    AnnounceMenu announce;
 
-    announce.doList();*/
-
-    DiscussMenu discussion;
+    announce.doList();
+    announce.doView();
+    announce.doEdit();
+    announce.doAdd();
+    announce.doList();
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    //announce.doDelete();
+    //announce.doList();
+    //cout << "Success!" << endl;
+    /*DiscussMenu discussion;
     discussion.doList();
+    //discussion.doView();
+    //discussion.doEdit();
+    //discussion.doAdd();
+    discussion.doDelete();
+    cout << "NEW APPARENTL " << endl;
+    discussion.doList();*/
+    StudentMenu men; 
+    men.doList();
     return 0;
 }

@@ -83,6 +83,7 @@ void AnnounceMenu::doList() {
         a.print();
         copy.pop();
     }
+    pAnnounce = &(list->top());
 }
 
 void AnnounceMenu::doView() {
@@ -126,6 +127,7 @@ void AnnounceMenu::doAdd(){
     announce.setText(text);
     //Announcement *p = &announce;
     list->push(announce);
+    selectedPost(announce);
 }
 
 void AnnounceMenu::doDelete() {
@@ -133,18 +135,16 @@ void AnnounceMenu::doDelete() {
     if (pAnnounce == nullptr) {
         doList();
     }
-    LinkedStackType<Announcement> copy = *list;
-    LinkedStackType<Announcement> newRev;
+    list->pop();
+    /*LinkedStackType<Announcement> newRev;
     while (!copy.isEmptyStack()){
-        /*
         if (copy.top() != *pAnnounce){
             Announcement a = copy.top();
             newRev.push(a);
             copy.pop();
         }
-        */
     }
-    /*//Reverse it 
+    //Reverse it 
     LinkedStackType<Announcement> newDel;
     while (!newRev.isEmptyStack()){
         Announcement a = copy.top();

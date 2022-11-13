@@ -16,8 +16,8 @@ class Discussion{
             post = p;
         };
 
-        void setStudent(Student& s){
-            student = s;
+        void setStudent(Student* s){
+            student = *s;
         };
 
         void setDate(string d){
@@ -48,9 +48,9 @@ class Discussion{
         };
         void print() {
             cout << student.getFirstName() <<  " " << student.getMiddleName() <<  " " << student.getLastName() <<  " " << endl;
-            cout << "------------------------------" << endl;
             cout << "Date: " << date.toString() << endl;
             cout << post << endl;
+            cout << setfill('-') << setw(50) << "\n";
         };
     private:
         Student student;
