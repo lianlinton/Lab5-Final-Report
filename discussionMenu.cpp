@@ -8,7 +8,7 @@
 #include "unorderedLinkedList.h"
 #include "discussion.h"
 #include "linkedListIterator.h"
-#include "utils.h"
+#include "utils.cpp"
 #include "student.h"
 //#include "discussion.h"
 
