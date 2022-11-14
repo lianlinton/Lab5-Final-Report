@@ -1,3 +1,6 @@
+/**
+ * Template file
+ */
 #pragma once
 
 #include <iostream>
@@ -15,8 +18,12 @@ public:
     /**
        Constructs a menu with no options.
     */
+    Menu(){};
     Menu(string name);
 
+   void setName(string name){
+      this->name = name;
+   }
     /**
        Adds an option to the end of this menu.
        @param option the option to add

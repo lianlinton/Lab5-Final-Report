@@ -1,3 +1,6 @@
+/**
+ * Template file
+ */
 #ifndef H_linkedQueue
 #define H_linkedQueue 
  

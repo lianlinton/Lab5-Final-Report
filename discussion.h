@@ -1,3 +1,6 @@
+/**
+ * Stores info of one discussion
+ */
 #pragma once
 #include "dateTime.cpp"
 #include "student.h"
@@ -50,7 +53,7 @@ class Discussion{
             cout << student.getFirstName() <<  " " << student.getMiddleName() <<  " " << student.getLastName() <<  " " << endl;
             cout << "Date: " << date.toString() << endl;
             cout << post << endl;
-            cout << setfill('-') << setw(50) << "\n";
+            cout << setfill('-') << setw(50) << "\n" << endl;
         };
     private:
         Student student;

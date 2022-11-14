@@ -1,4 +1,6 @@
-//Header file: StackADT.h
+/**
+ * Template file
+ */
 
 #ifndef H_StackADT
 #define H_StackADT

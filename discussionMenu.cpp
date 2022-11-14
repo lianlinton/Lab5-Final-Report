@@ -1,3 +1,6 @@
+/**
+ * Initializes, views, adds, edits, and deletes from list of announcements
+ */
 #pragma once
 #include <iostream>
 #include <string>
@@ -8,7 +11,7 @@
 #include "unorderedLinkedList.h"
 #include "discussion.h"
 #include "linkedListIterator.h"
-#include "utils.h"
+#include "utils.cpp"
 #include "student.h"
 //#include "discussion.h"
 
@@ -119,14 +122,14 @@ void DiscussMenu::doView() {
     if (pDiscuss == nullptr) {        
         doList();
     }
-    cout << "***** View Slected Discussion ****" << endl;
+    cout << "***** View Selected Discussion ****" << endl;
     Discussion d = getSelectedPost();
     d.print();
     //pCourse->printCourseInfo();
 }
 
 void DiscussMenu::doAdd(){
-    cout << "***** View Slected Discussion ****" << endl;   
+    cout << "***** Add Discussion ****" << endl;   
     string user;
     string date; // convert previous date string to class DateType
     string post;

@@ -1,3 +1,6 @@
+/**
+ * Stores info of one student
+ */
 #pragma once
 #include "person.h"
 #include <iostream>
@@ -26,7 +29,7 @@ public:
 	void toString(){
 		cout << "Id: " << id << endl;
 		cout << "Name: " + firstName + " "+lastName+ "\nAddress: "+ address + ", " + city + " " +state+" " + zip << endl;
-		cout << setfill('-') << setw(50) << "\n";
+		cout << setfill('-') << setw(50) << "\n" << endl;
 	}
 
 private:

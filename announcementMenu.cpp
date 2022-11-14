@@ -1,3 +1,6 @@
+/**
+ * Initializes, views, adds, edits, and deletes from list of announcements
+ */
 #pragma once
 #include <iostream>
 #include <string>
@@ -13,6 +16,7 @@ using namespace std;
 AnnounceMenu::AnnounceMenu()
     : Menu("Announcement Menu") {
     addOption("1) Select an announcement from the list of announcements"); 
+    addOption("2) View announcement");
     addOption("3) Add announcement");   
     addOption("4) Edit announcement"); 
     addOption("5) Delete announcement");

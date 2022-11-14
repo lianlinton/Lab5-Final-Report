@@ -1,3 +1,6 @@
+/**
+ * Template file
+ */
 #pragma once
 
 using namespace std;

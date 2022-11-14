@@ -1,5 +1,7 @@
-#ifndef menu
-#define menu
+/**
+ * Template file
+ */
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -53,7 +55,7 @@ int Menu::getInput() const {
         displayPrefixIndex();
         cin >> ch;
         input = static_cast<int>(ch) - 48;
-    } while (input < 1 || input > (int)options.size());
+    } while (input < 1 || input >(int)options.size());
     return input;
 }
 
@@ -66,4 +68,3 @@ char Menu::getOption() const {
     cin >> input;
     return input;
 }
-#endif

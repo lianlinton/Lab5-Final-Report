@@ -1,3 +1,6 @@
+/**
+ * Template file
+ */
 #pragma once
 
 template <class Type>

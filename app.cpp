@@ -1,40 +1,18 @@
+/**
+ * Tester file to run the myCanvas class
+ */
+
 #include <iostream>
-#include "announcementMenu.cpp"
-#include "discussionMenu.cpp"
-#include "studentMenu.cpp"
+#include "myCanvas.cpp"
+
 using namespace std;
 int main() {
-    /*Announcement announce;
+    MyCanvas myCanvas;
 
-    announce.setTitle("Hi");
-    announce.setDateType("10/10/10");
-    announce.setText("Posted.");
+    if (myCanvas.doLogin()) {
+        myCanvas.doCourseMenu();
+        myCanvas.doMainMenu();
+    }
 
-    announce.print();*/
-
-    AnnounceMenu announce;
-
-    announce.doList();
-    announce.doView();
-    announce.doEdit();
-    announce.doAdd();
-    announce.doList();
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    //announce.doDelete();
-    //announce.doList();
-    //cout << "Success!" << endl;
-    /*DiscussMenu discussion;
-    discussion.doList();
-    //discussion.doView();
-    //discussion.doEdit();
-    //discussion.doAdd();
-    discussion.doDelete();
-    cout << "NEW APPARENTL " << endl;
-    discussion.doList();*/
-    StudentMenu men; 
-    men.doList();
     return 0;
 }

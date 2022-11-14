@@ -1,4 +1,6 @@
-//Header file: stackADT.h
+/**
+ * Template file
+ */
 
 #ifndef H_QueueADT
 #define H_QueueADT

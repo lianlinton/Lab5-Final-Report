@@ -1,4 +1,6 @@
-//Header File: linkedStack.h
+/**
+ * Template file
+ */
   
 #ifndef H_StackType
 #define H_StackType

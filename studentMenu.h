@@ -1,3 +1,6 @@
+/**
+ * Initializes, views, adds, edits, and deletes from list of students
+ */
 #pragma once 
 #include <fstream>
 #include <vector>

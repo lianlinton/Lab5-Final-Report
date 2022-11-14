@@ -1,3 +1,6 @@
+/**
+ * Stores info of one person
+ */
 #pragma once
 #include <string>
 #include <iostream>
@@ -32,6 +35,10 @@ public:
 
 	//Accessor functions
 	int getId() const { return id; };	// lab 5
+
+	string getName() {
+		return firstName + " " + middleName + " " + lastName;
+	};
 
 	string getFirstName() const{ return firstName; };
 	string getMiddleName() const { return middleName; }

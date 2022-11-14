@@ -1,3 +1,6 @@
+/**
+ * Template file
+ */
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS // supress localtime warning
 #include "dateType.h"

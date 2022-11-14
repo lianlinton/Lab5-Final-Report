@@ -1,3 +1,6 @@
+/**
+ * Initializes, views, adds, edits, and deletes from list of announcements
+ */
 #pragma once
 #include <fstream>
 #include <vector>
@@ -12,7 +15,9 @@ const string DISCUSS_DATA = "discussions.dat";
 enum DISCUSSION_MENU_OPTION {
 	DISCUSS_LIST='1',
 	DISCUSS_VIEW='2',
-	DISCUSS_DELETE='3',
+	DISCUSS_ADD='3',
+	DISCUSS_EDIT='4',
+	DISCUSS_DELETE='4',
 	DISCUSS_EXIT='x' 
 };
 

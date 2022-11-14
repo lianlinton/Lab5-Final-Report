@@ -1,3 +1,7 @@
+/**
+ * Stores info of one student
+ */
+#pragma once
 #include <iostream>
 #include <string>
 #include <iomanip>

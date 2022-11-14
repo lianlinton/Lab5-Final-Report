@@ -1,10 +1,14 @@
+/**
+ * Initializes, views, adds, edits, and deletes from list of students
+ */
 #include "menu.cpp"
 #include "studentMenu.h"
 #include "student.h"
-#include "utils.h"
+#include "utils.cpp"
 #include "studentType.cpp"
 #include "linkedQueue.h"
 #include <typeinfo>
+#pragma once
 #include <string>
 #include <vector>
 #include <iostream>

@@ -1,3 +1,6 @@
+/**
+ * Stores details of one announcement
+ */
 #pragma once
 #include <iostream>
 #include <iomanip>
@@ -21,7 +24,7 @@ class Announcement{
             cout << title << endl;
             cout << "Date: " << postDate.toString() << endl;
             cout << text << endl;
-            cout << setfill('-') << setw(50) << "\n";
+            cout << setfill('-') << setw(50) << "\n" << endl;
         };
 
         string getTitle(){
